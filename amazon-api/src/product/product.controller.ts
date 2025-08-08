@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { ProductService } from './product.service';
+import { get } from 'http';
 
 @Controller('product')
 export class ProductController {
@@ -9,4 +10,10 @@ export class ProductController {
     async getAll() {
         return this.productService.getAllProducts();
     }
+
+    //get single product 
+    @Get(':id') 
+        getOne(@Param('id', ParseIntPipe) id: number){
+            return this.productService.findOne(id);
+        }
 }

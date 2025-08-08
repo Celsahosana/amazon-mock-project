@@ -1,2 +1,29 @@
 @import "tailwindcss";
 
+.addToCart-btn {
+    background-color: var(--color-yellow-400);
+    padding: 0.25rem 0;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.cancel-btn {
+    border: 2px solid gray;
+    padding: 0.25rem 0;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 14px;
+}
+
+.qty {
+    border: 2px solid gray;
+    padding: 0.25rem 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 14px;
+    
+}
