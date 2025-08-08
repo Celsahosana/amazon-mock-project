@@ -159,7 +159,7 @@ const Products = () => {
                             <img className='h-3 w-3' src='https://img.icons8.com/?size=100&id=77&format=png&color=737373'/>
                         </div>
                            <Link
-                                to={`/products/${product.id}`}
+                                to={`/product/${product.id}`}
                                 className="font-semibold text-blue-600 hover:underline"
                                 >{product.name}-{product.description}
                             </Link>

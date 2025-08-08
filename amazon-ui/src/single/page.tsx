@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const SingleProduct = () => {
   const [ isError , setError] = useState<string | null>(null);
 
   useEffect(() => {
-
+    console.log(id)
     const fetchProducts = async() => {
       try{
         setLoading(true);
@@ -50,6 +51,7 @@ const SingleProduct = () => {
         setLoading(false)
       }
     }
+    fetchProducts();
      
   }, [id]);
 
@@ -104,8 +106,11 @@ const SingleProduct = () => {
     <div className="flex flex-row w-full h-auto">
       {/* picture */}
       <div className="min-h-screen w-[50%]">
-        <img src={product.image} alt={product.name || "https://via.placeholder.com/150"} className="w-full h-full" />
-      </div>
+        <img 
+          src={product.image || "https://via.placeholder.com/150"} 
+          alt={product.name || "No name"} 
+        />      
+        </div>
 
 
 
